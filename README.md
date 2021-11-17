@@ -9,3 +9,6 @@ Resolución máxima: 30 mts
 
 Resolución temporal: 8 días
 
+Scripts:
+  ScriptServidorMNDWI - Genera MNDWI y lo almacena en Drive en la carpeta _App0_Dwnld. Por el momento tanto la fecha como el país están hardcoded.
+  drive
