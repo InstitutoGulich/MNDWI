@@ -11,10 +11,9 @@ from datetime import date, datetime, timedelta
 import glob
 import numpy as np
 
-#path = "/mnt/datos/Repositorio/sancor/indices/mndwi/" #Ruta de los archivos MNDWI
-path = "/home/jrubio/Documentos/VENVS/SANCOR4/temp/"#indices/mndwi/" #Ruta de los archivos MNDWI
-script = "python3 /mnt/datos/Repositorio/sancor/scripts/main_mndwi.py "
-paises ["UY"]#,"PY","BR","AR"]
+path = "/mnt/datos/Repositorio/.../indices/mndwi/" #Ruta de descsrgs para los archivos MNDWI
+script = "python3 /mnt/datos/Repositorio/.../scripts/main_mndwi.py "
+paises = ["UY","PY","BR","AR"]
 
 def ultimaDescarga(path):
 	listDates = []
@@ -23,8 +22,9 @@ def ultimaDescarga(path):
 	return sorted(listDates,reverse=True)[0]
 
 for pais in paises:
-	ult=ultimaDescarga(path)
-
+	print(path+pais+'/')
+	ult=ultimaDescarga(path+pais+'/')
+	print("Ultimo: ", ult)
 	anyo = int(ult[0:4])
 	dia = int(ult[-3:])
 	if dia == 361:
@@ -35,7 +35,6 @@ for pais in paises:
 	dwnldDate = str(anyo)+"%03d"%dia
 	print(dwnldDate)
 
-#	driveDownload(path,pais,dwnldDate)
-	os.system('python3 '+'main_mndwi.py "'+ff+'" "'+pais+'"')
+	os.system(script + dwnldDate + '" "' + pais)
 	
 	
