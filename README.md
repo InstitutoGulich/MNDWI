@@ -18,4 +18,5 @@ Donde faltan datos de Sentinel se completan con Landsat y donde tampoco hay de e
   - watch_drive.py - script encargado de controlar la ejecución de main_drive.py. Por el momento ejecuta instancias particulares. Se generalizará para toda fecha.
   - main_mndwi - Genera MNDWI y lo almacena en Drive en la carpeta *_PAIS.* para cada país. Por el momento ejecuta instancias particulares. Se generalizará para toda fecha.
   - main_drive - Descarga desde Drive los mapas de mndwi almacenado en la carpeta *_PAIS.* para cada país. Por el momento ejecuta instancias particulares. Se generalizará para toda fecha.
+  - mndwi_2_geoserver.py - Sube los mapas de mndwi al geoserver para ser publicados. Por el momento ejecuta instancias particulares. Se generalizará para toda fecha.
  
